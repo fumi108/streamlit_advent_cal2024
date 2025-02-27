@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: ./web
+      dockerfile: "Dockerfile_web"
+    container_name: streamlit_advcal2024
+    environment:
+      TZ: Asia/Tokyo
+    ports:
+      - "8503:8501"
+    volumes:
+      - ./web:/web
+
